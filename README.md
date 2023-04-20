@@ -23,7 +23,7 @@ Since the the space limited of the repository, the other datasets [Twitter-2010]
 
 # Setup
 
-First create a PMDK pool to allocate the Persistent memory space
+First using the root user create a PMDK pool to allocate the Persistent memory space
 
 ```
 
