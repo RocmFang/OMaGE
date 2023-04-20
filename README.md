@@ -32,42 +32,14 @@ pmempool create --layout OMaGE --size 500G obj [persistent memory mount path]
 ```
 
 
-Compile DistGER with CMake:
-
-```
-mkdir build && cd build
-
-cmake ..
-
-make
-```
-
-Then the compiled application executable files are installed at the "bin" directory:
-
-```
-ls ./bin
-```
-
-# Partitioning
-
-If we need to run the train data for the downstream tasks, such as Link prediction, the test data also should be processed.
-
-```
-cd build
-
-./bin/mpgp -i [train_data] -e [test_data] -v [vertex_num] -p [partition_num] -t [float:0, integer:1]
-```
-
-The partitioned dataset will be saved in the input dataset directory. 
-
 # Graph Embedding
 
-To start the embedding, we fist need to cover the train graph to binary format
+To start the embedding, we fist need to complie application executable files
 
-```
-cd build
+```bash
+g++ -O3 -m64 -I/opt/intel/oneapi/mkl/2022.0.2/include -Iinclude ProNE.cpp  ./csdb.cpp -Wl,--start-group /opt/intel/oneapi/mkl/2022.0.2/lib/intel64/libmkl_intel_lp64.a /opt/intel/oneapi/mkl/2022.0.2/lib/intel64/libmkl_intel_thread.a /opt/intel/oneapi/mkl/2022.0.2/lib/intel64/libmkl_core.a -Wl,--end-group -L/opt/intel/oneapi/compiler/2022.0.2/linux/compiler/lib/intel64_lin -liomp5 -lpthread -ldl -lm -fopenmp -w -lgflags -lpmemobj -lredsvd -lnuma -o OMaGE
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/oneapi/compiler/2022.0.2/linux/compiler/lib/intel64_lin
 
-./bin/gconverter -i ../dataset/LJ.train-8-r -o ./LJ-8.data-r -s weighted
 ```
 
 Then create the "out" directory to save the walks file or embedding file
