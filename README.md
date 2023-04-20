@@ -17,9 +17,9 @@
 
 # Datasets
 
-The evaluated dataset soc-LiveJournal are prepraed in the "data" directory.
+The demo dataset Wiki-Vote is prepraed in the "data" directory.
 
-Since the the space limited of the repository, the other datasets [Twitter-2010](https://law.di.unimi.it/datasets.php), [Com-Orkut](https://snap.stanford.edu/) and [Twittwer](http://datasets.syr.edu/pages/datasets.html) can be found in their open resource.
+Since the the space limited of the repository, the evaluated datasets [Twitter-2010](https://law.di.unimi.it/datasets.php), [Com-Orkut](https://snap.stanford.edu/), [soc-Pokec](https://snap.stanford.edu/data/soc-Pokec.html),  [Twittwer](http://datasets.syr.edu/pages/datasets.html) and [soc-LiveJournal](https://snap.stanford.edu/data/soc-LiveJournal1.html) can be found in their open resource.
 
 # Setup
 
