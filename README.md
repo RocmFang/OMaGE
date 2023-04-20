@@ -1,7 +1,7 @@
 <meta name="robots" content="noindex">
 
 
-## This codebase is for the paper: On Billion-Scale Graph Embedding–Towards Bridging the Performance Gap between DRAM and Persistent Memory
+## This codebase is for the paper: On Billion-Scale Graph Embedding--Towards Bridging the Performance Gap between DRAM and Persistent Memory
 
 # Prerequisites
 
