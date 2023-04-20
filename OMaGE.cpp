@@ -18,14 +18,14 @@ using namespace REDSVD;
 const float EPS = 0.00000000001f;
 
 
-DEFINE_string(filename1, "./data/soc-LiveJournal_sort_final.txt", "Filename for edgelist file.");
-DEFINE_string(filename2, "./data/soc-LiveJournal_deg_final.txt", "Filename for edgelist file.");
+DEFINE_string(filename1, "./data/Wiki-Vote_sort_f.txt", "Filename for edgelist file.");
+DEFINE_string(filename2, "./data/Wiki-Vote_deg_f.txt", "Filename for edgelist file.");
 DEFINE_string(pool_path, "/mnt/pmem0/pmem_pool", "PMEM POOL PATH");
 DEFINE_string(layout, "OMaGE", "POOL layout");
 DEFINE_int64(pool_size, uint64_t(1073741824) * uint64_t(500), "POOL layout"); // 512 pool size
 DEFINE_string(emb1, "sparse.emb", "Filename for svd results.");
 DEFINE_string(emb2, "spectral.emb", "Filename for svd results.");
-DEFINE_int32(num_node, 4846609, "Number of node in the graph.");
+DEFINE_int32(num_node, 7115, "Number of node in the graph.");
 DEFINE_int32(num_rank, 128, "Embedding dimension.");
 DEFINE_int32(num_step, 10, "Number of order for recursion.");
 DEFINE_int32(num_iter, 5, "Number of iter in randomized svd.");
