@@ -42,10 +42,18 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/oneapi/compiler/2022.0.2/linu
 
 ```
 
-Then create the "out" directory to save the walks file or embedding file
+Then run the OMaGE executed file
 
 ```
-mkdir out
+./OMaGE
+```
+
+We also probvide a script file to incorperate the complied and exectution procedure.
+
+```
+
+./run.sh
+
 ```
 
 ### Run in Single-machine Environment
