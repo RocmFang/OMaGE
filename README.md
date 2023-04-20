@@ -42,6 +42,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/oneapi/compiler/2022.0.2/linu
 
 ```
 
+
 Then run the OMaGE executed file
 
 ```
@@ -53,5 +54,3 @@ We also probvide a script file to incorperate the complied and exectution proced
 ```
 ./run.sh
 ```
-
-
