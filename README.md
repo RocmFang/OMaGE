@@ -8,6 +8,7 @@
 - Ubuntu 16.04
 - Linux kernel 4.15.0
 - g++ 9.4.0
+- [PMDK](https://github.com/pmem/pmdk/)
 - [Eigen](http://eigen.tuxfamily.org)
 - [redsvd](https://code.google.com/p/redsvd/)
 - [Openmp](https://www.openmp.org/)
@@ -16,13 +17,22 @@
 
 # Datasets
 
-The evaluated dataset Youtube and LiveJournal are prepraed in the "dataset" directory.
+The evaluated dataset soc-LiveJournal are prepraed in the "data" directory.
 
-Since the the space limited of the repository, the other datasets [Twitter](https://law.di.unimi.it/datasets.php), [Com-Orkut](https://snap.stanford.edu/) and [Flickr](http://datasets.syr.edu/pages/datasets.html) can be found in their open resource.
+Since the the space limited of the repository, the other datasets [Twitter-2010](https://law.di.unimi.it/datasets.php), [Com-Orkut](https://snap.stanford.edu/) and [Twittwer](http://datasets.syr.edu/pages/datasets.html) can be found in their open resource.
 
 # Setup
 
-First Compile DistGER with CMake:
+First create a PMDK pool to allocate the Persistent memory space
+
+```
+
+pmempool create --layout OMaGE --size 500G obj [persistent memory mount path]
+
+```
+
+
+Compile DistGER with CMake:
 
 ```
 mkdir build && cd build
